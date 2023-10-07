@@ -1,8 +1,7 @@
 #include <stdio.h>
-
 /**
-* entry point function
-* function that outputs a string and returns void
+*main - entry point function
+*Return: returns 0
 */
 int main(void)
 {
