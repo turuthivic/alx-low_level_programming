@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
-* main - entry point function 
+* main - entry point function
 *
 * Return: return 0
 */
@@ -22,10 +22,11 @@ int main(void)
 				putchar(j + '0');
 				putchar(k + '0');
 				if (!(i == 7 && j == 8 && k == 9))
+				{
 					putchar(',');
-
-				putchar(' ');
-				if (k == 9) 
+					putchar(' ');
+				}
+				if (k == 9)
 				{
 					break;
 				}
