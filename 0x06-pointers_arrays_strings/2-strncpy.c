@@ -12,27 +12,13 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	char *original_dest = dest;
-	/* Move to the end of *dest */
-	while (*dest != '\0')
-		dest++;
+	/* man strncpy */
+	int i;
+	for (i = 0; i < n && src[i] != '\0'; i++)
+		dest[i] = src[i];
 
-	/* Copy up to n bytes of src to dest*/
-	while (n > 0 && *src != '\0')
-	{
-		*dest = *src;
-		dest++;
-		src++;
-		n--;
-	}
+	for ( ; i < n; i++)
+		dest[i] = '\0';
 
-	/* Pad with null bytes if src is less than n chars long */
-	while (n > 0)
-	{
-		*dest = '\0';
-		dest++;
-		n--;
-	}
-
-	return (original_dest);
+	return (dest);
 }
