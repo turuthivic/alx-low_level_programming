@@ -15,8 +15,8 @@
 		/* Move to the end of the dest string */
 		while (*dest != '\0')
 			dest++;
-		
-		/* Copy the src string to the end of dest */	
+
+		/* Copy the src string to the end of dest */
 		while (*src != '\0')
 		{
 			*dest = *src;
@@ -28,5 +28,5 @@
 		*dest = '\0';
 
 		/* Return to the beginning of the original dest */
-		return original_dest;
+		return (original_dest);
 	}
